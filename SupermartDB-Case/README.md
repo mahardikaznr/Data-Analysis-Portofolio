@@ -1,4 +1,4 @@
-#SupermartDB-Case
-Hi There! in this project i've use SupermartDB for answering 3 Bussiness Question with only Postgresql.
+Hi there! in this project I use SupermartDB to answer 3 Business Questions with Postgresql only.
+This database contains 3 tables. Customer, sales, and product tables.
 
-You can read specify of the cases in this repository png files.
+You can read cases defined in png and query files. Enjoy!
