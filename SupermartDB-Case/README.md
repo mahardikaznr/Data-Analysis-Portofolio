@@ -1,3 +1,4 @@
+# Supermart DB cases📊
 Hi there!
 
 In this project I use SupermartDB to answer 3 Business Questions with Postgresql only.
