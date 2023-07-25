@@ -1,3 +1,3 @@
-# Welcome to Dana Analysis portfolio! 📑
+# Welcome to My Data Analysis Portfolio! 📑
 
-This repository contains examples of Data Analyst project that I've done. Feel free to take a look and reach out if you have any questions. Enjoy!
+This repository contains examples of Data Analyst Project that I've done. Feel free to take a look and reach out if you have any questions. Enjoy!
