@@ -23,7 +23,7 @@ where region = 'East'
 group by p.product_id, p.product_name, region
 order by total_sold desc limit 5;
 
---5 least selling product in South Region
+-- top 5 selling product in South Region
 select
 	p.product_id,
 	p.product_name,
@@ -36,6 +36,103 @@ right join (select s.*, c.*
 			   	on s.customer_id = c.customer_id) as sc
 on p.product_id = sc.product_id
 where region = 'South'
+group by p.product_id, p.product_name, region
+order by total_sold desc limit 5;
+
+----top 5 selling product in West Region
+select
+	p.product_id,
+	p.product_name,
+	sc.region as region,
+	sum(sc.quantity) as total_sold
+from product as p
+right join (select s.*, c.*
+			   	from sales as s
+			   	left join customer as c
+			   	on s.customer_id = c.customer_id) as sc
+on p.product_id = sc.product_id
+where region = 'West'
+group by p.product_id, p.product_name, region
+order by total_sold desc limit 5;
+
+----top 5 selling product in Central Region
+select
+	p.product_id,
+	p.product_name,
+	sc.region as region,
+	sum(sc.quantity) as total_sold
+from product as p
+right join (select s.*, c.*
+			   	from sales as s
+			   	left join customer as c
+			   	on s.customer_id = c.customer_id) as sc
+on p.product_id = sc.product_id
+where region = 'Central'
+group by p.product_id, p.product_name, region
+order by total_sold desc limit 5;
+
+/*case 2.1*/
+-- 5 least Selling Product in East Region
+select
+	p.product_id,
+	p.product_name,
+	sc.region as region,
+	sum(sc.quantity) as total_sold
+from product as p
+right join (select s.*, c.*
+			   	from sales as s
+			   	left join customer as c
+			   	on s.customer_id = c.customer_id) as sc
+on p.product_id = sc.product_id
+where region = 'East'
+group by p.product_id, p.product_name, region
+order by total_sold limit 5;
+
+-- 5 least selling product in South Region
+select
+	p.product_id,
+	p.product_name,
+	sc.region as region,
+	sum(sc.quantity) as total_sold
+from product as p
+right join (select s.*, c.*
+			   	from sales as s
+			   	left join customer as c
+			   	on s.customer_id = c.customer_id) as sc
+on p.product_id = sc.product_id
+where region = 'South'
+group by p.product_id, p.product_name, region
+order by total_sold limit 5;
+
+---- 5 least selling product in West Region
+select
+	p.product_id,
+	p.product_name,
+	sc.region as region,
+	sum(sc.quantity) as total_sold
+from product as p
+right join (select s.*, c.*
+			   	from sales as s
+			   	left join customer as c
+			   	on s.customer_id = c.customer_id) as sc
+on p.product_id = sc.product_id
+where region = 'West'
+group by p.product_id, p.product_name, region
+order by total_sold limit 5;
+
+---- 5 least selling product in Central Region
+select
+	p.product_id,
+	p.product_name,
+	sc.region as region,
+	sum(sc.quantity) as total_sold
+from product as p
+right join (select s.*, c.*
+			   	from sales as s
+			   	left join customer as c
+			   	on s.customer_id = c.customer_id) as sc
+on p.product_id = sc.product_id
+where region = 'Central'
 group by p.product_id, p.product_name, region
 order by total_sold limit 5;
 
