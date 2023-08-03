@@ -1,6 +1,6 @@
 # Exciting Data Analysis Journey! 🚀
 
-![Data Analysis](https://id.pinterest.com/pin/711216966142408351/)
+![Data Analysis](https://drive.google.com/file/d/1YhfC2RFoH9JCN5dZgzbGVwQLgBMw2obR/view?usp=sharing)
 
 ## Introduction
 
